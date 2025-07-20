@@ -1,0 +1,38 @@
+.nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 4em;
+	z-index: 100;
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		width: 70%;
+		margin: 1em auto;
+
+		&-item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0.1em 0.5em;
+			font-size: 2em;
+			list-style: none;
+			background-color: #fff;
+			border-radius: 25px;
+			transition: background-color 0.5s;
+			text-decoration: none;
+
+			color: #000;
+			transition: color 0.5s;
+
+			&:hover {
+				background-color: #555;
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}

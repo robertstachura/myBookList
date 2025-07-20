@@ -1,0 +1,23 @@
+.upcoming-releases {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 35%;
+	background-color: #fff;
+	margin: 1em;
+	border-radius: 25px;
+
+	&__header {
+		margin: 0.5em;
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		height: 100%;
+		width: 100%;
+	}
+}

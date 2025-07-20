@@ -1,0 +1,40 @@
+.review {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+    width: 70%;
+
+	&__user-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        min-width: 10%;
+
+		&-avatar {
+			height: 50px;
+			width: 50px;
+		}
+
+        &-name {
+            margin-top: 1em;
+        }
+
+        &-score {
+            margin-top: 1em;
+        }
+
+        &-buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 1em;
+        }
+	}
+
+    &__review-text {
+        height: 100%;
+    }
+}
