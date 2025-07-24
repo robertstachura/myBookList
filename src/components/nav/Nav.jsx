@@ -6,8 +6,8 @@ export default function Nav() {
 				<a href="#" className="nav__box-item">
 					Home
 				</a>
-				<a href="#recommended" className="nav__box-item">
-					Recommended
+				<a href="#news" className="nav__box-item">
+					News
 				</a>
 				<a href="#review" className="nav__box-item">
 					Review

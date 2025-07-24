@@ -1,6 +1,5 @@
 import "./reviewSection.scss";
 import Book from "../../C/book/Book";
-import Review from "../../C/review/Review"
 
 export default function ReviewSection() {
 	const books = [

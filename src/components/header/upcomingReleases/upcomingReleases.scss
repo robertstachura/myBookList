@@ -4,9 +4,9 @@
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	height: 35%;
-	background-color: #fff;
-	margin: 1em;
+	height: 330px;
+	// background-color: #fff;
+	margin-top: .8em;
 	border-radius: 25px;
 
 	&__header {
@@ -16,7 +16,7 @@
 	&__box {
 		display: flex;
 		align-items: center;
-		justify-content: space-evenly;
+		justify-content: space-between;
 		height: 100%;
 		width: 100%;
 	}

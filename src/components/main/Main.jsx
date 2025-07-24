@@ -1,11 +1,11 @@
 import "./main.scss";
 import ReviewSection from "./reviewSection/ReviewSection";
-import RecommendedSection from "./recommended/Recommended";
+import RegularNews from "./regularNews/RegularNews";
 export default function Main() {
 	return (
 		<main className="main">
-			{/* <RecommendedSection /> */}
-			<ReviewSection />
+			<RegularNews/>
+			{/* <ReviewSection /> */}
 		</main>
 	);
 }

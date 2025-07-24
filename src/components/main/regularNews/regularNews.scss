@@ -1,0 +1,24 @@
+.news-section {
+	display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.news-box {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+    width: 70%;
+	height: 100%;
+    margin-right: 40px;
+}
+
+.review-box {
+	display: flex;
+    flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	width: 30%;
+	height: 100%;
+}

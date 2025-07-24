@@ -1,0 +1,40 @@
+.mini-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 180px;
+    margin-bottom: 1em;
+    border-radius: 25px;
+    overflow: hidden;
+
+
+    &__img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 40%;
+    }
+
+    &__text {
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 60%;
+        // padding: 5px 0;
+        text-align: center;
+        font-size: 1.4rem;
+        background-color: #fff;
+
+        &-title {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        &-content {
+        }
+    }
+}
