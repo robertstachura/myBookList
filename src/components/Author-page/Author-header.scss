@@ -1,0 +1,123 @@
+@use "../../colors" as *;
+
+.author-header {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	width: 100%;
+	height: 36vh;
+	margin-top: 50px;
+	padding: 1em;
+}
+
+.author-banner {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&__img {
+		height: 265px;
+		width: 185px;
+		border-radius: 8px;
+		margin-bottom: 1em;
+	}
+
+	&__actions {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&-add-btn {
+			width: 70%;
+			height: 35px;
+			color: $color-text;
+			border: none;
+			border-radius: 8px;
+		}
+		&-favorite-btn {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 35px;
+			height: 35px;
+			font-size: 2rem;
+			border: none;
+			border-radius: 8px;
+		}
+	}
+}
+
+.author-description {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding: 0 1em;
+	font-size: 2rem;
+
+	&__text {
+		width: 100%;
+		margin-top: 1em;
+		text-align: center;
+		font-size: 1.6rem;
+		color: $color-text;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: rgba(0, 0, 0, 0.1);
+			border-radius: 2px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgba(0, 0, 0, 0.3);
+			border-radius: 2px;
+
+			&:hover {
+				background: rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		height: 10%;
+		padding: 0 1em;
+		color: $color-text;
+	}
+}
+
+.ti-stars {
+	position: relative;
+	&:hover .avg-books-score-tooltip {
+		opacity: 1;
+	}
+}
+
+.ti-heart {
+	position: relative;
+	&:hover .favorites-tooltip {
+		opacity: 1;
+	}
+}
+
+.ti-books {
+	position: relative;
+	&:hover .books-count-tooltip {
+		opacity: 1;
+	}
+}
+
+.ti-users {
+	position: relative;
+	&:hover .readers-count-tooltip {
+		opacity: 1;
+	}
+}
+

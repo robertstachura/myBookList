@@ -1,0 +1,35 @@
+@use "../../colors" as *;
+
+.review-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+
+    width: 100%;
+
+	&__box {
+        display: flex;
+		flex-direction: column;
+        justify-content: start;
+        align-items: start;
+		height: 100%;
+		width: 100%;
+		padding-left: 1em;
+
+		&-header {
+			margin-bottom: 1em;
+			font-size: 2rem;
+			color: $color-text;
+		}
+
+		&-content {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			flex-wrap: wrap;
+			gap: 2em;
+			margin-bottom: 1em;
+		}
+	}
+}

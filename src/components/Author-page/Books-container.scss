@@ -1,0 +1,74 @@
+@use "../../colors" as *;
+
+.autor-book-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 1em;
+}
+
+.error-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10rem;
+	color: $primary-color;
+
+	&__text {
+		margin-left: 1em;
+		font-size: 5rem;
+	}
+}
+
+.books-container {
+	margin-bottom: 1em;
+	width: 100%;
+
+	&__header {
+		color: $color-text;
+		font-size: 3rem;
+
+		&::after {
+			display: block;
+			height: 1px;
+			width: 200px;
+			margin-top: 0.4em;
+			background-color: $color-text-white;
+			content: "";
+		}
+	}
+
+	&__books {
+		padding: 0.5em;
+		margin-top: 1em;
+
+		&::-webkit-scrollbar {
+			height: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: rgba(77, 12, 12, 0.1);
+			border-radius: 2px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: rgba(255, 255, 255, 0.3);
+			border-radius: 2px;
+
+			&:hover {
+				background: rgba(255, 255, 255, 0.5);
+			}
+		}
+
+		&-content {
+			display: flex;
+			justify-content: start;
+			gap: 2em;
+			width: 100%;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+

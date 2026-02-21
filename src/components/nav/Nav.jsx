@@ -1,14 +1,15 @@
 import "./nav.scss";
+import { Link } from "react-router-dom";
 export default function Nav() {
 	return (
 		<nav className="nav">
 			<div className="nav__box">
-				<a href="#" className="nav__box-item">
+				<Link to="/" className="nav__box-item">
 					Home
-				</a>
-				<a href="#news" className="nav__box-item">
-					News
-				</a>
+				</Link>
+				<Link to="/author" className="nav__box-item">
+					Author
+				</Link>
 				<a href="#review" className="nav__box-item">
 					Review
 				</a>

@@ -1,0 +1,16 @@
+@use "../../../../colors" as *;
+
+.data {
+    
+    &__name {
+        font-size: 13px;
+        padding-bottom: 5px;
+        color: $color-text;
+    }
+
+    &__value {
+        font-size: 12px;
+        padding-bottom: 1em;
+        color: $color-text-light;
+    }
+}

@@ -1,0 +1,27 @@
+.stats-wrapper {
+	display: flex;
+	flex-direction: column;
+	font-size: 3rem;
+	font-weight: bold;
+
+	&__header {
+		margin-bottom: 0.5em;
+		font-size: 1.6rem;
+		font-weight: normal;
+	}
+
+	&__counter {
+		display: flex;
+		justify-content: space-between;
+		padding-left: 0.2em;
+	}
+
+	&::after {
+		display: block;
+		height: 2px;
+		width: 90%;
+		margin: 0.5em auto;
+		background-color: #000;
+		content: "";
+	}
+}

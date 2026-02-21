@@ -1,40 +1,211 @@
+@use "../../../colors" as *;
+
 .review {
+	position: relative;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-    width: 70%;
+	width: 300px;
+	height: 350px;
+	padding: 1em;
+	background-color: $primary-color;
+	color: $color-text;
+	border-radius: 5%;
 
-	&__user-details {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        min-width: 10%;
+	&__user-avatar {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 70px;
+		width: 70px;
+		transform: translate(-20%, -20%);
+		background-color: #333;
+		border-radius: 50%;
+		border: none;
+		z-index: 10;
 
-		&-avatar {
-			height: 50px;
-			width: 50px;
+		&:hover + .review__user-details {
+			opacity: 1;
+			pointer-events: auto;
 		}
-
-        &-name {
-            margin-top: 1em;
-        }
-
-        &-score {
-            margin-top: 1em;
-        }
-
-        &-buttons {
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            width: 100%;
-            margin-top: 1em;
-        }
 	}
 
-    &__review-text {
-        height: 100%;
-    }
+	&__user-details {
+		position: absolute;
+		top: 0;
+		width: 90%;
+		// height: 250px;
+		padding: 0.5em;
+		margin: 1em;
+		background-color: $secondary-color;
+		border-radius: 8px;
+		opacity: 0;
+		transition: opacity 0.3s;
+		pointer-events: none;
+
+		&:hover {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		&-name {
+			position: relative;
+			text-align: center;
+			margin-bottom: 0.9em;
+		}
+
+		&-params {
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			height: 32px;
+			width: 100%;
+			margin-bottom: 0.5em;
+		}
+
+		&-param {
+			position: relative;
+			width: 80px;
+			padding: 0.4em 0;
+			text-align: center;
+			background-color: $btn-color;
+			background-color: $accent-primary;
+			color: $color-text-white;
+			border-radius: 8px;
+
+			&:hover .review__user-details-tooltip {
+				opacity: 1;
+			}
+		}
+
+		&-message-area {
+			position: relative;
+			height: 150px;
+			margin-top: 1em;
+			text-align: center;
+			font-size: 1.3rem;
+			border: 1px solid $bg-color;
+			border-radius: 8px;
+
+			&::before {
+				content: "User message";
+				position: absolute;
+				top: 0px;
+				left: 10px;
+				padding: 0 0.3em 0 0.3em;
+				transform: translateY(-60%);
+				background: $secondary-color;
+			}
+		}
+
+		&-message-text {
+			// background-color: $accent-purple;
+			padding-top: 1em;
+		}
+
+		&-tooltip {
+			top: -10px;
+			// width: 300px;
+			transform: translate(-50%, -100%);
+			left: 50%;
+			z-index: 10;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		height: 10%;
+		width: 100%;
+		text-align: center;
+
+		&-details {
+			display: flex;
+			justify-content: end;
+			height: 50%;
+			gap: 1.5em;
+			font-size: 1.6rem;
+		}
+
+		&-helpfulness {
+		}
+
+		&-date {
+		}
+	}
+
+	&__title {
+		margin-top: 1em;
+		text-align: center;
+	}
+
+	&__content {
+		height: 80%;
+		width: 100%;
+		margin-top: 1em;
+		text-align: center;
+		font-size: 1.4rem;
+
+		&-text {
+		}
+	}
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 10%;
+		width: 100%;
+		// padding: 0 1em 1em 0;
+
+		&-follow {
+			font-size: 2rem;
+			transition: opacity 0.3s;
+			color: $accent-primary;
+		}
+
+		&-div{
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			width: 60px;
+		}
+
+		&-btn {
+			border: none;
+			background: none;
+			transition: scale 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				scale: 1.4;
+			}
+		}
+
+		&-up {
+			color: $score-ten-color;
+		}
+
+		&-minus {
+			color: $score-one-color;
+		}
+
+		&-comments {
+			color: $accent-primary;
+		}
+
+		&-value {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-left: 5px;
+		}
+
+		i {
+			font-size: 2.5rem;
+		}
+	}
 }
+

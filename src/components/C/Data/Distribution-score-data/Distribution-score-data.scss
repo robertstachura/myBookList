@@ -1,0 +1,97 @@
+@use "../../../../colors" as *;
+
+.distribution-score-data {
+	display: flex;
+	justify-content: space-around;
+	align-items: end;
+	margin-bottom: 2em;
+
+	&:hover .distribution-score-data__score-value {
+		opacity: 0;
+	}
+
+	&:hover .distribution-score-data__score-percent {
+		opacity: 1;
+	}
+
+	&__score {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		align-items: center;
+		height: 200px;
+		color: $color-text;
+
+		&-bar {
+			position: relative;
+			border-radius: 25px;
+			width: 20px;
+			min-height: 20px;
+			background-color: #fff;
+		}
+
+		&-value {
+			position: absolute;
+			top: -2em;
+			left: 50%;
+			transform: translateX(-50%);
+			transition: 0.5s ease;
+		}
+
+		&-percent {
+			position: absolute;
+			top: -2em;
+			left: 50%;
+			transform: translateX(-50%);
+			opacity: 0;
+			transition: 0.5s ease;
+		}
+
+		&-scale {
+			position: absolute;
+			bottom: -2em;
+			margin-top: 1em;
+		}
+	}
+}
+
+.one {
+	background-color: $score-one-color;
+}
+
+.two {
+	background-color: $score-two-color;
+}
+
+.three {
+	background-color: $score-three-color;
+}
+
+.four {
+	background-color: $score-four-color;
+}
+
+.five {
+	background-color: $score-five-color;
+}
+
+.six {
+	background-color: $score-six-color;
+}
+
+.seven {
+	background-color: $score-seven-color;
+}
+
+.eight {
+	background-color: $score-eight-color;
+}
+
+.nine {
+	background-color: $score-nine-color;
+}
+
+.ten {
+	background-color: $score-ten-color;
+}

@@ -1,0 +1,20 @@
+@use '../../colors' as *;
+
+.highlighted-books {
+    display: flex;
+    justify-content: space-around;
+    background-color: $primary-color;
+    width: 100%;
+    border-radius: 8px;
+    padding: 1em 0 1em 0;
+
+    &__book {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-header {
+            color: $color-text;
+        }
+    }
+}

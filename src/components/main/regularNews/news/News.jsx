@@ -1,5 +1,5 @@
+import Tag from "../../../C/Tag/Tag"
 import "./news.scss";
-
 export default function News() {
 	return (
 		<div className="news">
@@ -15,15 +15,9 @@ export default function News() {
 					</a>
 				</div>
 				<div className="header__tags">
-					<a href="" className="header__tags-tag">
-						news
-					</a>
-					<a href="" className="header__tags-tag">
-						post
-					</a>
-					<a href="" className="header__tags-tag">
-						popular
-					</a>
+					<Tag tagName={"news"}/>
+					<Tag tagName={"post"}/>
+					<Tag tagName={"popular"}/>
 				</div>
 				<p className="header__publication-date">1d</p>
 			</div>

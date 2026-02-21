@@ -1,0 +1,17 @@
+@use "../../colors" as *;
+
+.author-details {
+	display: flex;
+	flex-direction: column;
+	width: 15%;
+	background-color: $primary-color;
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		// &-header {
+		// }
+		// &-value {
+		// }
+	}
+}

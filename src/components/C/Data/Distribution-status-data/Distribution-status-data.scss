@@ -1,0 +1,128 @@
+@use "../../../../colors" as *;
+
+.stats-distribution {
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		color: $color-text-white;
+	}
+}
+
+.distribution-data {
+	&__name {
+		padding: 0.5em 1em;
+		margin-bottom: 0.5em;
+		border-radius: 8px;
+	}
+
+	&__value {
+		text-align: center;
+		&-text {
+			color: $color-text-lighter;
+			// font-size: 1.6rem;
+		}
+	}
+
+	&__bar {
+		display: flex;
+		height: 10px;
+		margin-top: 1em;
+	}
+}
+
+.bar-tooltip {
+	position: absolute;
+	top: 200%;
+	left: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0.5em 0.8em;
+	opacity: 0;
+
+	border-radius: 8px;
+
+	transition: opacity 0.5s;
+	transform: translateX(-50%);
+
+	pointer-events: none;
+
+	&__text {
+		color: $color-text-white;
+	}
+}
+
+.bar {
+	position: relative;
+	height: 100%;
+}
+
+.bar.first {
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+
+.bar.last {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+
+.current {
+	background-color: $color-status-current;
+
+	&__percent-value {
+		background-color: $color-status-current;
+	}
+
+	&:hover .current__percent-value {
+		opacity: 1;
+	}
+}
+
+.planning {
+	background-color: $color-status-planning;
+
+	&__percent-value {
+		background-color: $color-status-planning;
+	}
+
+	&:hover .planning__percent-value {
+		opacity: 1;
+	}
+}
+.completed {
+	background-color: $color-status-completed;
+
+	&__percent-value {
+		background-color: $color-status-completed;
+	}
+
+	&:hover .completed__percent-value {
+		opacity: 1;
+	}
+}
+.paused {
+	background-color: $color-status-paused;
+
+	&__percent-value {
+		background-color: $color-status-paused;
+	}
+
+	&:hover .paused__percent-value {
+		opacity: 1;
+	}
+}
+.dropped {
+	background-color: $color-status-dropped;
+
+	&__percent-value {
+		background-color: $color-status-dropped;
+	}
+
+	&:hover .dropped__percent-value {
+		opacity: 1;
+	}
+}

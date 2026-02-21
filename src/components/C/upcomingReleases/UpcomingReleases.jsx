@@ -1,5 +1,5 @@
 import "./upcomingReleases.scss";
-import Book from "../../C/book/Book";
+import Book from "../book/Book";
 
 const books = [
 	{
@@ -33,6 +33,14 @@ const books = [
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi amet quas ratione ipsa libero dicta, accusantium qui explicabo quam debitis doloremque modi illum, suscipit molestiae aut quae rem non placeat?",
 		timer: "4d",
 		isFavorite: true,
+	},
+	{
+		img: "https://cdn.pixabay.com/photo/2025/06/05/16/39/desert-9643279_1280.jpg",
+		title: "Tytuł5",
+		description:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi amet quas ratione ipsa libero dicta, accusantium qui explicabo quam debitis doloremque modi illum, suscipit molestiae aut quae rem non placeat? Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+		timer: "14d",
+		isFavorite: false,
 	},
 	{
 		img: "https://cdn.pixabay.com/photo/2025/06/05/16/39/desert-9643279_1280.jpg",
