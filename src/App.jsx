@@ -8,6 +8,7 @@ import {
 import Nav from "./components/nav/Nav";
 import HomePage from "./pages/Home-page/Home-page";
 import AuthorPage from "./pages/Author-page/Author-page";
+import BookPage from "./pages/Book-page/Book-page";
 
 
 export default function App() {
@@ -20,8 +21,7 @@ export default function App() {
 				<Routes>
 					<Route path="/" element={<HomePage/>} />
 					<Route path="/author/:id" element={<AuthorPage />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
-          {/* <Route path="/products" element={<Products />} /> */}
+					<Route path="/book/:id" element={<BookPage />} />
 
 					{/* Trasa z parametrem */}
 					{/* <Route path="/products/:id" element={<ProductDetail />} /> */}

@@ -1,6 +1,6 @@
 import "./Author-header.scss";
 import defaultImg from "../../assets/placeholder.png";
-import Tooltip from "../C/Tooltip/Tooltip";
+import Tooltip from "../../components/C/Tooltip/Tooltip";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -40,27 +40,19 @@ export default function AuthorHeader() {
 			<div className="author-banner">
 				<img src={defaultImg} alt="" className="author-banner__img" />
 
-				<div className="author-banner__actions">
+				{/* <div className="author-banner__actions">
 					<button className="author-banner__actions-add-btn">
 						Add to list
 					</button>
 					<button className="author-banner__actions-favorite-btn">
 						<i class="ti ti-heart"></i>
 					</button>
-				</div>
+				</div> */}
 			</div>
 
 			<div className="author-description">
 				<div className="author-description__header">
 					<p className="author-description__header-name">{author?.authorName}</p>
-
-					<div className="author-description__header-favorites-count">
-						{author?.country} <i class="ti ti-flag"></i>
-					</div>
-
-					<div className="author-description__header-avg-books-score">
-						{author?.birthday} <i class="ti ti-cake"></i>
-					</div>
 				</div>
 				<p className="author-description__text">{author?.description}</p>
 			</div>

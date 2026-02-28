@@ -6,7 +6,7 @@
 	flex-direction: row;
 	align-items: start;
 	width: 100%;
-	height: 36vh;
+	// height: 36vh;
 	margin-top: 50px;
 	padding: 1em;
 }
@@ -20,7 +20,6 @@
 		height: 265px;
 		width: 185px;
 		border-radius: 8px;
-		margin-bottom: 1em;
 	}
 
 	&__actions {
@@ -85,7 +84,7 @@
 
 	&__header {
 		display: flex;
-		justify-content: space-between;
+		justify-content: start;
 		width: 100%;
 		height: 10%;
 		padding: 0 1em;
@@ -120,4 +119,3 @@
 		opacity: 1;
 	}
 }
-

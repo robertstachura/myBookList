@@ -1,29 +1,35 @@
-import AuthorHeader from "./Author-header";
-import AuthorOverviews from "./Author-overviews"
-
-import "./Author-page.scss";
+import BookHeader from "./DescriptionBox";
+import BookOverviews from "./Book-overviews";
+import "./Book-page.scss";
 import { useState, Suspense, lazy } from "react";
+import BookBanner from "./Book-banner";
+import DescriptionBox from "./DescriptionBox";
 
-export default function AuthorPage() {
-	const BooksContainer = lazy(() =>
-		import("./Books-container")
-	);
-	const ReviewContainer = lazy(() =>
-		import("./Review-container")
-	);
+export default function BookPage() {
+	// const BooksContainer = lazy(() => import("./Books-container"));
+	// const ReviewContainer = lazy(() => import("./Review-container"));
 
 	const [currentContent, setCurrentContent] = useState(0);
 
 	const contentComponents = {
-		0: <AuthorOverviews />,
-		1: <BooksContainer />,
+		0: <BookOverviews />,
+		// 1: <BooksContainer />,
 		// 2: <ReviewContainer />
 	};
-	return (
-		<>
-			<AuthorHeader />
 
-			<main className="content-box">
+	return (
+		<div className="book-page">
+			<header className="book-page__banner">
+				<BookBanner />
+			</header>
+
+			<div className="book-page__description">
+				<DescriptionBox />
+			</div>
+
+			{/* <BookHeader /> */}
+
+			{/* <main className="content-box">
 				<div className="content-box__nav content-wrapper">
 					<button
 						className={`content-box__nav-btn ${
@@ -37,21 +43,15 @@ export default function AuthorPage() {
 							currentContent === 1 ? "active" : ""
 						}`}
 						onClick={() => setCurrentContent(1)}>
-						Books
+						Reviews
 					</button>
-					{/* <button
-						className={`content-box__nav-btn ${
-							currentContent === 2 ? "active" : ""
-						}`}
-						onClick={() => setCurrentContent(2)}>
-						Review
-					</button> */}
+					
 				</div>
 
 				<Suspense fallback={<div className="loading">Ładowanie...</div>}>
 					{contentComponents[currentContent] || contentComponents[0]}
 				</Suspense>
-			</main>
-		</>
+			</main> */}
+		</div>
 	);
 }

@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import "./book.scss";
+import	 "./Book.scss";
 
 export default function BookItem({
 	img,
@@ -68,18 +68,22 @@ export default function BookItem({
 				</div>
 			</div>
 			<div>
-				<div className={`description-box ${descriptionClass}`}>
-					<div className="description-box__space-box"></div>
-					<div className={`description-box__content ${descriptionClass}`}>
-						<div className="description-box__content-header">
-							<p className="description-box__content-header-avgs">{avgScore}</p>
-							<p className="description-box__content-header-favorite">
+				<div className={`book-description-box ${descriptionClass}`}>
+					<div className="book-description-box__space-box"></div>
+					<div className={`book-description-box__content ${descriptionClass}`}>
+						<div className="book-description-box__content-header">
+							<p className="book-description-box__content-header-avgs">
+								{avgScore}
+							</p>
+							<p className="book-description-box__content-header-favorite">
 								{favoriteCount}
 							</p>
 						</div>
-						<div className="description-box__content-line"></div>
-						<div className="description-box__content-text">
-							<p className="description-box__content-value">{description}</p>
+						<div className="book-description-box__content-line"></div>
+						<div className="book-description-box__content-text">
+							<p className="book-description-box__content-value">
+								{description}
+							</p>
 						</div>
 					</div>
 				</div>

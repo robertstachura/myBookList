@@ -1,0 +1,30 @@
+@use "../../colors" as *;
+
+.label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;  
+    place-self: center;  
+    // height: 50px;
+    // width: 200px;
+    
+    border: 1px solid $secondary-color;
+    border-radius: 8px;
+    
+
+    &__header {
+        position: absolute;
+        top: 0%;
+        left: 10%;
+        padding: 0 .5em;
+        background-color: $primary-color;
+        transform: translateY(-50%);
+    }
+
+    &__content {
+
+    }
+}

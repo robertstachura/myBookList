@@ -11,7 +11,7 @@
 	&:hover .info-box {
 		opacity: 1;
 	}
-	&:hover .description-box {
+	&:hover .book-description-box {
 		opacity: 1;
 		pointer-events: auto;
 	}
@@ -164,7 +164,7 @@
 	}
 }
 
-.description-box {
+.book-description-box {
 	position: absolute;
 	top: 0;
 	left: 100%;
@@ -240,7 +240,7 @@
 		}
 	}
 }
-.description-box-left {
+.book-description-box-left {
 	left: -295px;
 	flex-direction: row-reverse;
 }

@@ -1,0 +1,53 @@
+@use "./../../colors" as *;
+
+.book-banner {
+	display: flex;
+	// justify-content: space-between;
+	background-color: $primary-color;
+	border-radius: 8px;
+	padding: 1em;
+
+	&__div {
+		display: flex;
+		flex-direction: column;
+
+		&-img {
+			height: 265px;
+			width: 185px;
+			border-radius: 8px;
+		}
+
+		&-add-btn {
+			width: 185px;
+			height: 35px;
+			margin-top: 1em;
+			color: $color-text-white;
+			background-color: $accent-primary;
+			border: none;
+			border-radius: 8px;
+		}
+
+	}
+
+	&__info {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: repeat(5, 1fr);
+		gap: 1em;
+		width: 100%;
+		// height: 100%;
+		padding-left: 1em;
+	}
+}
+
+
+// &-favorite-btn {
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	width: 35px;
+// 	height: 35px;
+// 	font-size: 2rem;
+// 	border: none;
+// 	border-radius: 8px;
+// }

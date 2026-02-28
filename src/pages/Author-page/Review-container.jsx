@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Review from "../C/review/Review";
+import Review from "../../components/C/review/Review";
 import "./Review-container.scss";
 
 export default function ReviewContainer() {

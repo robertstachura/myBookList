@@ -1,0 +1,23 @@
+@use "../../colors" as *;
+
+.book-overviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 1em;
+
+    width: 100%;
+
+    color: $color-text;
+}
+
+.book-ranking {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    // place-self:z;
+    
+    background-color: $primary-color;
+    
+    border-radius: 8px;
+    
+}
