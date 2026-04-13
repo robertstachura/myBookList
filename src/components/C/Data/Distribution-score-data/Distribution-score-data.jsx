@@ -66,12 +66,13 @@ export default function DistributionScoreData({ ratings }) {
 
 	return (
 		<div className="content-wrapper">
+			<h3 className="content-header">Score Distribution</h3>
 			<div className="distribution-score-data ">
 				{scores.map((score) => (
 					<div className="distribution-score-data__score">
 						<div
 							className={`distribution-score-data__score-bar ${score.color}`}
-							style={{ height: `${score.percent}%` }}>
+							style={{ height: `${score.percent * 2 + 20}px` }}>
 							<p className="distribution-score-data__score-value">
 								{score.value}
 							</p>

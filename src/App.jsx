@@ -6,7 +6,6 @@ import {
 	Navigate,
 } from "react-router-dom";
 import Nav from "./components/nav/Nav";
-import HomePage from "./pages/Home-page/Home-page";
 import AuthorPage from "./pages/Author-page/Author-page";
 import BookPage from "./pages/Book-page/Book-page";
 
@@ -19,7 +18,7 @@ export default function App() {
 
 				{/* Definicja tras */}
 				<Routes>
-					<Route path="/" element={<HomePage/>} />
+					{/* <Route path="/" element={<HomePage/>} /> */}
 					<Route path="/author/:id" element={<AuthorPage />} />
 					<Route path="/book/:id" element={<BookPage />} />
 

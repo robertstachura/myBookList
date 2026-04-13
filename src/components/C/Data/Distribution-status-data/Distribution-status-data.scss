@@ -7,6 +7,9 @@
 		justify-content: space-evenly;
 		color: $color-text-white;
 	}
+	&__content-header {
+		padding-bottom: 1em;
+	}
 }
 
 .distribution-data {

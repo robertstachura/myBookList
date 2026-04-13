@@ -18,6 +18,7 @@ export default function DistributionStatusData({ stats }) {
 
 	return (	
 		<div className="stats-distribution content-wrapper">
+			<h3 className="content-header stats-distribution__content-header">Status Distribution</h3>
 			<div className="stats-distribution__header">
 				{segments.map((segment) => (
 					<div key={segment.key} className="distribution-data">

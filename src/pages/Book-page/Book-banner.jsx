@@ -1,7 +1,7 @@
 import "./Book-banner.scss";
 
 import defaultImg from "../../assets/placeholder.png";
-import Label from "../label/Label";
+import StatsLabel from "../Label/StatsLabel/StatsLabel";
 
 export default function BookBanner() {
 	return (
@@ -16,16 +16,16 @@ export default function BookBanner() {
 				</button> */}
 
 			<div className="book-banner__info">
-				<Label header="Autor" content="Sanderson" />
-				<Label header="Ranking" content="Sanderson" />
-				<Label header="Ulubione" content="Sanderson" />
-				<Label header="Seria" content="Sanderson" />
-				<Label header="Data premiery" content="Sanderson" />
-				<Label header="Data premiery orginału" content="Sanderson" />
-				<Label header="Liczba stron" content="Sanderson" />
-				<Label header="ISBN" content="Sanderson" />
-				<Label header="Orginalny język" content="Sanderson" />
-				<Label header="Tłumacz" content="Sanderson" />
+				<StatsLabel header="Autor" content="Sanderson" />
+				<StatsLabel header="Ranking" content="Sanderson" />
+				<StatsLabel header="Ulubione" content="Sanderson" />
+				<StatsLabel header="Seria" content="Sanderson" />
+				<StatsLabel header="Data premiery" content="Sanderson" />
+				<StatsLabel header="Data premiery orginału" content="Sanderson" />
+				<StatsLabel header="Liczba stron" content="Sanderson" />
+				<StatsLabel header="ISBN" content="Sanderson" />
+				<StatsLabel header="Orginalny język" content="Sanderson" />
+				<StatsLabel header="Tłumacz" content="Sanderson" />
 			</div>
 		</div>
 	);

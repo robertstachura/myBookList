@@ -13,7 +13,7 @@ import {
 import "./Data-charts.scss";
 import { useState, useEffect } from "react";
 
-export default function DataCharts({ chart }) {
+export default function DataCharts({ chart, header }) {
 	const [year, setYear] = useState(null);
 	const [scale, setScale] = useState(false);
 	// const [stats, setStats] = useState(null);
@@ -31,6 +31,7 @@ export default function DataCharts({ chart }) {
 
 	return (
 		<div className="content-wrapper chart">
+			<h3 className="chart__header">{header}</h3>
 			<div className="chart__years">
 				{chart.years?.map((y) => {
 					return (

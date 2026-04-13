@@ -2,6 +2,12 @@
 
 .chart {
 	width: 100%;
+
+    &__header {
+        color: $color-text;
+        margin-bottom: .2em;
+    }
+
 	&__years {
 		display: flex;
 		justify-content: space-evenly;

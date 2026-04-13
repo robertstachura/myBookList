@@ -1,4 +1,4 @@
-@use "../../../colors" as *;
+@use "../../colors" as *;
 
 .item {
 	position: relative;
@@ -69,28 +69,13 @@
 				padding-bottom: 0.13em;
 				padding-left: 0.1em;
 				z-index: 10;
-				transition: background-color 0.3s, color 0.3s;
+				transition:
+					background-color 0.3s,
+					color 0.3s;
 
 				&:hover {
 					background-color: $primary-color;
 					color: $color-text-white;
-				}
-
-				&:hover + .quick-actions__actions,
-				&:hover ~ .quick-actions__actions:hover {
-					pointer-events: auto;
-
-					.quick-actions__actions-current-btn {
-						transform: translateY(16%);
-					}
-
-					.quick-actions__actions-planning-btn {
-						transform: translateY(116%);
-					}
-
-					.quick-actions__actions-completed-btn {
-						transform: translateY(216%);
-					}
 				}
 			}
 
@@ -122,13 +107,14 @@
 
 		&__actions {
 			position: absolute;
-			bottom: 28px;
-			height: 85px;
+			bottom: 23px;
+			height: 90px;
 			min-width: 27px;
+			padding-bottom: 10px;
 			pointer-events: none;
 
-			&:hover {
-				pointer-events: auto !important;
+			&-open {
+				pointer-events: auto;
 
 				.quick-actions__actions-current-btn {
 					transform: translateY(16%);
@@ -146,19 +132,28 @@
 			&-current-btn {
 				position: absolute;
 				transform: translateY(315%);
-				transition: transform 0.9s, background-color 0.3s, color 0.3s;
+				transition:
+					transform 0.9s,
+					background-color 0.3s,
+					color 0.3s;
 			}
 
 			&-planning-btn {
 				position: absolute;
 				transform: translateY(315%);
-				transition: transform 0.6s, background-color 0.3s, color 0.3s;
+				transition:
+					transform 0.6s,
+					background-color 0.3s,
+					color 0.3s;
 			}
 
 			&-completed-btn {
 				position: absolute;
 				transform: translateY(315%);
-				transition: transform 0.3s, background-color 0.3s, color 0.3s;
+				transition:
+					transform 0.3s,
+					background-color 0.3s,
+					color 0.3s;
 			}
 		}
 	}
@@ -177,8 +172,8 @@
 	z-index: 5;
 
 	&:hover {
-			pointer-events: auto;
-		}
+		pointer-events: auto;
+	}
 
 	&__space-box {
 		height: 100%;
@@ -194,7 +189,6 @@
 		background-color: $primary-color;
 		color: $color-text;
 		border-radius: 8px;
-	
 
 		&-header {
 			display: flex;

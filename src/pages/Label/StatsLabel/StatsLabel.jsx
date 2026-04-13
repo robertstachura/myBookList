@@ -1,4 +1,4 @@
-import "./Label.scss"
+import "./StatsLabel.scss"
 
 export default function Label({header, content}) {
     return(

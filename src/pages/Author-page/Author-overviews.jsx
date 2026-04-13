@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import DistributionStatusData from "../../components/C/Data/Distribution-status-data/Distribution-status-data";
 import DistributionScoreData from "../../components/C/Data/Distribution-score-data/Distribution-score-data";
 import DataCharts from "../../components/C/Data/Data-charts/Data-charts";
-import Book from "../../components/C/book/Book";
+import Book from "../../components/book/Book";
 
 import img from "../../assets/placeholder.png";
 

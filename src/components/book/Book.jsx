@@ -1,5 +1,5 @@
-// import { useState } from "react";
-import	 "./Book.scss";
+import { useState } from "react";
+import "./Book.scss";
 
 export default function BookItem({
 	img,
@@ -12,17 +12,23 @@ export default function BookItem({
 	descriptionClass,
 }) {
 	// const [hovered, setHovered] = useState(false);
+	const [actionsOpen, setActionsOpen] = useState(false);
 	return (
 		<div className="item">
 			{timer && <p className="timer">{timer}</p>}
 			<div className="book-img" style={{ backgroundImage: `url(${img})` }}>
 				<div className="info-box">
 					{/* <h3 className="info-box__title">{title}</h3> */}
-					<div className="quick-actions">
-						<div className="quick-actions__btn quick-actions__btn-open-btn">
+					<div
+						className="quick-actions"
+						onMouseLeave={() => setActionsOpen(false)}>
+						<div
+							className="quick-actions__btn quick-actions__btn-open-btn"
+							onMouseEnter={() => setActionsOpen(true)}>
 							<i class="ti ti-pencil"></i>
 						</div>
-						<div className="quick-actions__actions">
+						<div
+							className={`quick-actions__actions ${actionsOpen ? "quick-actions__actions-open" : ""}`}>
 							<button
 								className="quick-actions__actions-current-btn quick-actions__btn quick-actions__btn-action-btn"
 								label="Mark as Current">

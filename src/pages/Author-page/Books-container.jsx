@@ -1,4 +1,4 @@
-import Book from "../../components/C/book/Book";
+import Book from "../../components/book/Book";
 import img from "../../assets/placeholder.png";
 // import img from "../../assets/icon/placeholder.png";
 

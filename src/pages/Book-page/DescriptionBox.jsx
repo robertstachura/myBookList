@@ -1,11 +1,11 @@
-import "./DescriptionBox.module.scss";
+import "./DescriptionBox.scss";
 
 export default function DescriptionBox() {
 	return (
 		<div className="description-box content-wrapper">
 			<div className="book-description">
 				<div className="book-description__header">
-					<header className="book-description__header-name">{}</header>
+					<header className="book-description__header-title">Book Title</header>
 				</div>
 				<div className="book-description__text">
 					<p className="book-description__text-content">
