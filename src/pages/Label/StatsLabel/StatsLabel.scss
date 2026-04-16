@@ -20,11 +20,17 @@
         top: 0%;
         left: 10%;
         padding: 0 .5em;
+        font-size: 1.2rem;
+        color: $color-text;
+        // color: $color-text-light;
+        // color: $color-text-lighter;
         background-color: $primary-color;
         transform: translateY(-50%);
     }
 
     &__content {
-
+        //  color: $color-text;
+        color: $color-text-light;
+        // color: $color-text-lighter;
     }
 }

@@ -1,84 +1,84 @@
 import "./MediaBox.scss";
 
-export default function MediaBox() {
+export default function MediaBox({
+	officialSite,
+	linkedin,
+	xProfile,
+	facebook,
+	instagram,
+	youtube,
+	tiktok,
+}) {
 	return (
 		<div className="media-box">
 			<a
-				href=""
+				href={officialSite}
 				rel="noopener noreferrer"
 				target="_blank"
-				className={
-					false === true
-						? "media-box__item media-box__official-site media-box__item--disable"
-						: "media-box__item media-box__official-site"
-				}>
-				<i class="ti ti-link"></i>
+				className={`media-box__item  
+					${officialSite === "" ? "media-box__item--disable" : ""}`}>
+				<i class="ti ti-link media-box__item-link"></i>
+				<p className="media-box__item-text">Strona autora</p>
 			</a>
+
 			<a
-				href=""
+				href={linkedin}
 				rel="noopener noreferrer"
 				target="_blank"
-				className={
-					false === true
-						? "media-box__item media-box__linkedin-site media-box__item--disable"
-						: "media-box__item media-box__linkedin-site"
-				}>
-				<i class="ti ti-brand-linkedin"></i>
+				className={`media-box__item  
+					${linkedin === "" ? "media-box__item--disable" : ""}`}>
+				<i class="ti ti-brand-linkedin media-box__item-link"></i>
+				<p className="media-box__item-text">Linkedin</p>
 			</a>
+
 			<a
-				href=""
+				href={xProfile}
 				rel="noopener noreferrer"
 				target="_blank"
-				className={
-					false === true
-						? "media-box__item media-box__x-site media-box__item--disable"
-						: "media-box__item media-box__x-site"
-				}>
-				<i class="ti ti-brand-x"></i>
+				className={`media-box__item  
+					${xProfile === "" ? "media-box__item--disable" : ""}`}>
+				<i class="ti ti-brand-x media-box__item-link"></i>
+				<p className="media-box__item-text">Profil X</p>
 			</a>
+
 			<a
-				href=""
+				href={facebook}
 				rel="noopener noreferrer"
 				target="_blank"
-				className={
-					false === true
-						? "media-box__item media-box__facebook-site media-box__item--disable"
-						: "media-box__item media-box__facebook-site"
-				}>
-				<i class="ti ti-brand-facebook"></i>
+				className={`media-box__item  
+					${facebook === "" ? "media-box__item--disable" : ""}`}>
+				<i class="ti ti-brand-facebook media-box__item-link"></i>
+				<p className="media-box__item-text">Facebook</p>
 			</a>
+
 			<a
-				href=""
+				href={instagram}
 				rel="noopener noreferrer"
 				target="_blank"
-				className={
-					false === true
-						? "media-box__item media-box__instagram-site media-box__item--disable"
-						: "media-box__item media-box__instagram-site"
-				}>
-				<i class="ti ti-brand-instagram"></i>
+				className={`media-box__item  
+					${instagram === "" ? "media-box__item--disable" : ""}`}>
+				<i class="ti ti-brand-instagram media-box__item-link"></i>
+				<p className="media-box__item-text">Instagram</p>
 			</a>
+
 			<a
-				href=""
+				href={youtube}
 				rel="noopener noreferrer"
 				target="_blank"
-				className={
-					false === true
-						? "media-box__item media-box__youtube-site media-box__item--disable"
-						: "media-box__item media-box__youtube-site"
-				}>
-				<i class="ti ti-brand-youtube"></i>
+				className={`media-box__item  
+					${youtube === "" ? "media-box__item--disable" : ""}`}>
+				<i class="ti ti-brand-youtube media-box__item-link"></i>
+				<p className="media-box__item-text">YouTube</p>
 			</a>
+
 			<a
-				href=""
+				href={tiktok}
 				rel="noopener noreferrer"
 				target="_blank"
-				className={
-					false === true
-						? "media-box__item media-box__tiktok-site media-box__item--disable"
-						: "media-box__item media-box__tiktok-site"
-				}>
-				<i class="ti ti-brand-tiktok"></i>
+				className={`media-box__item  
+					${tiktok === "" ? "media-box__item--disable" : ""}`}>
+				<i class="ti ti-brand-tiktok media-box__item-link"></i>
+				<p className="media-box__item-text">TikTok</p>
 			</a>
 		</div>
 	);

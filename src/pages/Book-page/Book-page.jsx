@@ -72,10 +72,17 @@ export default function BookPage() {
 				<TagLabel name="abc" />
 				<TagLabel name="abc" />
 				<TagLabel name="abc" />
+				<TagLabel name="abc" />
+				<TagLabel name="abc" />
+				<TagLabel name="abc" />
 			</section>
 
-			<section className="book-page__media">
+			{/* <section className="book-page__media">
 				<MediaBox />
+			</section> */}
+
+			<section className="book-page__reviews">
+
 			</section>
 
 			<section className="book-page__status-distribution">
@@ -90,31 +97,11 @@ export default function BookPage() {
 				<DataCharts chart={ratingChart} header={"Rating Over Time"} />
 			</section>
 
-			{/* <BookHeader /> */}
+			<section className="book-page__readers-over-time">
+				<DataCharts chart={ratingChart} header={"Readers Over Time"} />
+			</section>
 
-			{/* <main className="content-box">
-				<div className="content-box__nav content-wrapper">
-					<button
-						className={`content-box__nav-btn ${
-							currentContent === 0 ? "active" : ""
-						}`}
-						onClick={() => setCurrentContent(0)}>
-						Overviews
-					</button>
-					<button
-						className={`content-box__nav-btn ${
-							currentContent === 1 ? "active" : ""
-						}`}
-						onClick={() => setCurrentContent(1)}>
-						Reviews
-					</button>
-					
-				</div>
-
-				<Suspense fallback={<div className="loading">Ładowanie...</div>}>
-					{contentComponents[currentContent] || contentComponents[0]}
-				</Suspense>
-			</main> */}
+			<section className="book-page__recomendation"></section>
 		</div>
 	);
 }
