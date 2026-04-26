@@ -16,16 +16,16 @@ export default function BookBanner() {
 				</button> */}
 
 			<div className="book-banner__info">
-				<StatsLabel header="Autor" content="Sanderson" />
-				<StatsLabel header="Ranking" content="Sanderson" />
-				<StatsLabel header="Ulubione" content="Sanderson" />
-				<StatsLabel header="Seria" content="Sanderson" />
-				<StatsLabel header="Data premiery" content="Sanderson" />
-				<StatsLabel header="Data premiery orginału" content="Sanderson" />
-				<StatsLabel header="Liczba stron" content="Sanderson" />
-				<StatsLabel header="ISBN" content="Sanderson" />
-				<StatsLabel header="Orginalny język" content="Sanderson" />
-				<StatsLabel header="Tłumacz" content="Sanderson" />
+				<StatsLabel header="Autor" content="Brandon Sanderson" />
+				<StatsLabel header="Seria" content="Archiwum" />
+				<StatsLabel header="Średnia ocen" content="7,8" />
+				<StatsLabel header="Liczba ocen" content="234574" />
+				<StatsLabel header="Ranking" content="1" />
+				<StatsLabel header="Top rakning" content="" />
+				<StatsLabel header="Ulubione" content="1235" />
+				<StatsLabel header="Liczba stron" content="1342 / 38h" />
+				<StatsLabel header="Recenzje" content="" />
+				<StatsLabel header="Język" content="Polski" />
 			</div>
 		</div>
 	);

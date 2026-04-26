@@ -4,7 +4,7 @@
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-template-rows: repeat(10, auto);
-	gap: 1em;
+	gap: 2em;
 
 	width: 100%;
 
@@ -20,27 +20,40 @@
 		grid-row: 1/2;
 	}
 
-	&__tags {
+	&__info {
 		grid-column: 1/2;
-		grid-row: 2/4;
-		gap: 1em;
+		grid-row: 2/9;
+		gap: 2em;
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-evenly;
+		justify-content: start;
 
-		max-height: 100%;
+		&-details {
+			width: 100%;
 
-		padding: 0.5em;
-		background-color: $primary-color;
-		border-radius: 8px;
-		height: 100%;
-	}
+			padding: 0.5em;
 
-	&__media {
-		grid-column: 1/2;
-		grid-row: 4/6;
+			background-color: $primary-color;
+			border-radius: 8px;
+		}
+
+		&-tags {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			height: 300px;
+			width: 100%;
+			background-color: $primary-color;
+			border-radius: 8px;
+		}
+
+		&-media {
+			grid-column: 1/2;
+			grid-row: 4/6;
+		}
 	}
 
 	&__reviews {
@@ -52,12 +65,12 @@
 
 	&__status-distribution {
 		grid-column: 2/6;
-		grid-row: 2/3;
+		grid-row: 3/4;
 	}
 
 	&__score-distribution {
 		grid-column: 2/6;
-		grid-row: 3/5;
+		grid-row: 4/5;
 	}
 
 	&__rating-over-time {
@@ -69,39 +82,72 @@
 		grid-column: 2/6;
 		grid-row: 6/7;
 	}
+
+	&__highlighted {
+		grid-column: 2/6;
+		grid-row: 2/3;
+		display: flex;
+		justify-content: space-between;
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			width: 24%;
+			height: 100px;
+
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+
+			border-radius: 8px;
+		}
+
+		&-header {
+			font-size: 1.8rem;
+			// color: $heartt-color;
+		}
+
+		&-position {
+			color: $heart-color;
+			color: $heartt-color;
+			color: $gold-color;
+			font-weight: bold;
+		}
+
+		&-year-score-ranking {
+			background-image: url("../../assets/grafic/ranking-rating.png");
+		}
+
+		&-year-favorite-ranking {
+			background-image: url("../../assets/grafic/ranking-favorite.jpg");
+		}
+
+		&-genre-score-ranking {
+			background-image: url("../../assets/grafic/ranking-rating.png");
+		}
+
+		&-genre-favorite-ranking {
+			background-image: url("../../assets/grafic/ranking-favorite.jpg");
+		}
+	}
 }
 
-// .content-box {
-// 	width: 100%;
-// 	display: flex;
-// 	flex-direction: column;
+.details-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
 
-// 	&__nav {
-// 		display: flex;
-// 		justify-content: space-evenly;
-// 		width: 100%;
-// 		padding: 0.2em 1em;
-// 		margin-top: 1em;
-// 		margin-bottom: 1em;
+	width: 100%;
 
-// 		&-btn {
-// 			padding: 0.5em 1em;
-// 			background: none;
-// 			border: none;
-// 			font-size: 2rem;
-// 			color: $color-text;
+	&__header {
+		// margin-top: .5em;
+		font-size: 1.2rem;
+		color: $color-text;
+	}
 
-// 			&:hover {
-// 				color: $color-text-light;
-// 			}
-// 		}
-// 	}
-
-// 	&__details {
-// 		display: flex;
-// 	}
-// }
-
-// .active {
-// 	color: $color-text-white;
-// }
+	&__content {
+		color: $color-text-light;
+	}
+}

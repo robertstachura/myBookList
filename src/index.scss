@@ -44,3 +44,58 @@ body {
 .content-header {
 	color: $color-text;
 }
+.bgIcon {
+	position: fixed;
+	color: $secondary-color;
+	z-index: -1;
+}
+
+.bookIcon {
+	left: 9%;
+	top: 12%;
+	rotate: 43deg;
+	scale: 5;
+}
+
+.bookFilledIcon {
+	right: 5%;
+	left: 91%;
+	top: 63%;
+	rotate: -25deg;
+	scale: 3;
+}
+
+.booksIcon {
+	top: 33%;
+	left: 88%;
+	scale: 5;
+	// rotate: 35deg;
+}
+
+.bookSecondIcon {
+	top: 75%;
+	left: 6%;
+	scale: 7;
+	rotate: -45deg;
+}
+
+.mugIcon {
+	left: 94%;
+	top: 88%;
+	scale: 4.8;
+	rotate: 35deg;
+}
+
+.mugFilledIcon {
+	top: 40%;
+	left: 4%;
+	scale: 5;
+	rotate: -30deg;
+}
+
+.coffeeIcon {
+	left: 93%;
+	top: 13%;
+	scale: 4.8;
+	rotate: -15deg;
+}

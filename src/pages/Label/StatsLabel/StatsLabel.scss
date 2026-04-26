@@ -29,8 +29,11 @@
     }
 
     &__content {
-        //  color: $color-text;
+        text-align: center;
         color: $color-text-light;
-        // color: $color-text-lighter;
+    }
+
+    &__link {
+        text-decoration: none;
     }
 }
