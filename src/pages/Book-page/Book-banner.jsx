@@ -18,14 +18,15 @@ export default function BookBanner() {
 			<div className="book-banner__info">
 				<StatsLabel header="Autor" content="Brandon Sanderson" />
 				<StatsLabel header="Seria" content="Archiwum" />
-				<StatsLabel header="Średnia ocen" content="7,8" />
-				<StatsLabel header="Liczba ocen" content="234574" />
-				<StatsLabel header="Ranking" content="1" />
-				<StatsLabel header="Top rakning" content="" />
-				<StatsLabel header="Ulubione" content="1235" />
-				<StatsLabel header="Liczba stron" content="1342 / 38h" />
-				<StatsLabel header="Recenzje" content="" />
+				<StatsLabel header="Wydawca" content="Publisher" />
+				<StatsLabel header="Tłumacz" content="" />
+				<StatsLabel header="ISBN" content="9780593801710" />
+				<StatsLabel header="Liczba stron" content="1342" />
 				<StatsLabel header="Język" content="Polski" />
+				<StatsLabel header="Format" content="Twarda oprawa" />
+				<StatsLabel header="Język orginału" content="" />
+				<StatsLabel header="Premiery" content="" />
+				<StatsLabel header="Premiery orginału" content="" />
 			</div>
 		</div>
 	);

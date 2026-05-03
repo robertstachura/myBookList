@@ -10,6 +10,12 @@ import DistributionStatusData from "../../components/C/Data/Distribution-status-
 import DataCharts from "../../components/C/Data/Data-charts/Data-charts";
 import MediaBox from "../../components/MediaBox/MediaBox";
 
+import {
+	StarFilledIcon,
+	StarsFilledIcon,
+	HeartFilledIcon,
+} from "../../assets/Icon/UiIcon";
+
 export default function BookPage() {
 	const { id } = useParams();
 	// const BooksContainer = lazy(() => import("./Books-container"));
@@ -67,85 +73,40 @@ export default function BookPage() {
 				<DescriptionBox />
 			</section>
 
-			<section className="book-page__info">
-				<div className="book-page__info-details">
-					<div className="details-item">
-						<h4 className="details-item__header">Wydawca</h4>
-						<p className="details-item__content">Publisher</p>
-					</div>
+			<div className="book-page__tags">
+				<TagLabel name="fantasy" />
+				<TagLabel name="action" />
+				<TagLabel name="wefwgwgws" />
+				<TagLabel name="wfwaaweffaw" />
+				<TagLabel name="abcada" />
+				<TagLabel name="abadafc" />
+				<TagLabel name="abcaff" />
+			</div>
 
-					<div className="details-item">
-						<h4 className="details-item__header">Orginalny tytuł</h4>
-						<p className="details-item__content">The way</p>
-					</div>
-
-					<div className="details-item">
-						<h4 className="details-item__header">Data premiery</h4>
-						<p className="details-item__content">The way</p>
-					</div>
-
-					<div className="details-item">
-						<h4 className="details-item__header">Data premiery orginału</h4>
-						<p className="details-item__content">The way</p>
-					</div>
-
-					<div className="details-item">
-						<h4 className="details-item__header">Orginalny język</h4>
-						<p className="details-item__content">The way</p>
-					</div>
-
-					<div className="details-item">
-						<h4 className="details-item__header">Tłumacz</h4>
-						<p className="details-item__content">Tłumacz</p>
-					</div>
-
-					<div className="details-item">
-						<h4 className="details-item__header">Format</h4>
-						<p className="details-item__content">Twarda oprawa</p>
-					</div>
-
-					<div className="details-item">
-						<h4 className="details-item__header">ISBN</h4>
-						<p className="details-item__content">9780593801710</p>
-					</div>
-				</div>
-
-				<div className="book-page__info-tags">
-					<h3 className="">Tagi</h3>
-					<TagLabel name="abc" />
-					<TagLabel name="abc" />
-					<TagLabel name="abc" />
-					<TagLabel name="abc" />
-					<TagLabel name="abc" />
-					<TagLabel name="abc" />
-					<TagLabel name="abc" />
-				</div>
-
-				<div className="book-page__info-media">
-					<MediaBox />
-				</div>
-
-				<div className="book-page__info-reviews"></div>
-			</section>
+			{/* <div className="book-page__reviews"></div>
+			<div className="book-page__info-media">
+				<MediaBox />
+			</div> */}
 
 			<section className="book-page__highlighted">
-				<div className="book-page__highlighted-item book-page__highlighted-year-score-ranking">
-					<h4 className="book-page__highlighted-header">2025</h4>
-					<p className="book-page__highlighted-position">3</p>
-				</div>
-				<div className="book-page__highlighted-item book-page__highlighted-year-favorite-ranking">
-					<h4 className="book-page__highlighted-header">2025</h4>
-					<p className="book-page__highlighted-position">3</p>
-				</div>
-				<div className="book-page__highlighted-item book-page__highlighted-genre-score-ranking">
-					<h4 className="book-page__highlighted-header">Genre</h4>
-					<p className="book-page__highlighted-position">3</p>
-				</div>
-				<div className="book-page__highlighted-item book-page__highlighted-genre-favorite-ranking">
-					<h4 className="book-page__highlighted-header">Genre</h4>
-					<p className="book-page__highlighted-position">3</p>
-				</div>
-				{/* <div className="book-page__highlighted-best-score"></div> */}
+				<a className="book-page__highlighted-item ">
+					<StarsFilledIcon className="book-page__highlighted-icon star-icon" />
+					{/* <StarFilledIcon className="book-page__highlighted-icon"/> */}
+					<p className="book-page__highlighted-content">#3 Najwyżej oceniane</p>
+				</a>
+				<a className="book-page__highlighted-item heart-icon">
+					<HeartFilledIcon className="book-page__highlighted-icon" />
+					<p className="book-page__highlighted-content">#3 Ranking polubień</p>
+				</a>
+				<a className="book-page__highlighted-item ">
+					<StarFilledIcon className="book-page__highlighted-icon star-icon" />
+					{/* <StarFilledIcon className="book-page__highlighted-icon"/> */}
+					<p className="book-page__highlighted-content">#3 Najwyżej oceniane w roku 2025</p>
+				</a>
+				<a className="book-page__highlighted-item heart-icon">
+					<HeartFilledIcon className="book-page__highlighted-icon" />
+					<p className="book-page__highlighted-content">#3  Ranking polubień w roku 2025</p>
+				</a>
 			</section>
 
 			<section className="book-page__status-distribution">

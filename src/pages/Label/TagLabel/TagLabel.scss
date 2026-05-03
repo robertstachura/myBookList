@@ -1,14 +1,18 @@
 @use "../../../colors" as *;
 
 .tagLabel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px;
-    width: 90%;
-    background-color: #fff;
-    border-radius: 8px;
+	display: inline-block;
 
-    &-name {
-    }
+
+	padding: 0 12px;
+	margin: 0 5px 5px 0;
+
+	font-size: 1.4rem;
+	text-align: center;
+
+	background-color: #fff;
+	border-radius: 10px;
+
+	&-name {
+	}
 }
