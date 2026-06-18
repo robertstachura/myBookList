@@ -46,7 +46,7 @@ export default function DataCharts({ chart, header }) {
 			</div>
 
 			<div className="chart__area">
-				<ResponsiveContainer width="100%" height={300}>
+				<ResponsiveContainer width="100%" height={200}>
 					<ComposedChart data={chart.chartsData[year] ?? []}>
 						<Area
 							type="monotone"

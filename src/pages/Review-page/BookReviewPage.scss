@@ -1,0 +1,234 @@
+@use "../../colors" as *;
+
+.book-review {
+	width: 85%;
+	margin: 50px auto;
+
+	&__content {
+		position: relative;
+		width: 100%;
+		padding: 2em;
+		color: $color-text;
+		background-color: $secondary-color;
+		border-radius: 8px;
+
+		&-date-of-issue {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+
+		&-header {
+			background-color: $primary-color;
+			margin-bottom: 1em;
+			padding: 1em;
+			border-radius: 8px;
+			text-align: center;
+			font-size: 1.8rem;
+		}
+
+		&-text {
+			padding: 1em;
+			text-align: justify;
+			font-size: 1.6rem;
+		}
+
+		&-user-info {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin-top: 1em;
+			color: $color-text;
+		}
+
+		&-user {
+			display: flex;
+			align-items: center;
+			padding: 0.3em 0.5em;
+			border-radius: 8px;
+			transition: color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $primary-color;
+				color: $color-text-white;
+			}
+		}
+
+		&-user-name {
+			margin-left: 0.5em;
+		}
+
+		&-user-img {
+			height: 50px;
+			transition: scale 0.3s;
+			border-radius: 50%;
+			cursor: pointer;
+
+			&:hover {
+				scale: 0.8;
+			}
+		}
+
+		&-span {
+			font-size: 2.5rem;
+			color: $score-nine-color;
+		}
+
+		///////////////////////////
+		// &-user-info {
+		// 	display: grid;
+		// 	grid-template-columns: .5fr .5fr 1fr;
+		// 	grid-template-rows: .5fr .5fr 1fr;
+		// 	width: 30%;
+		// 	margin-left: auto;
+		// 	place-items: center;
+		// 	margin-top: 1em;
+		// 	color: $color-text;
+		// }
+
+		// &-user {
+		// 	grid-column: 3/4;
+		// 	grid-row: 3/4;
+		// 	display: flex;
+		// 	align-items: center;
+		// 	padding: 0.3em 0.5em;
+		// 	border-radius: 8px;
+		// 	transition: color 0.3s;
+		// 	cursor: pointer;
+
+		// 	&:hover {
+		// 		background-color: $primary-color;
+		// 		color: $color-text-white;
+		// 	}
+		// }
+
+		// &-user-name {
+		// 	margin-left: 0.5em;
+		// }
+
+		// &-user-img {
+		// 	height: 50px;
+		// 	transition: scale 0.3s;
+		// 	border-radius: 50%;
+		// 	cursor: pointer;
+
+		// 	&:hover {
+		// 		scale: 0.8;
+		// 	}
+		// }
+
+		// &-span {
+		// 	font-size: 2.5rem;
+		// 	color: $score-nine-color;
+		// }
+
+		// &-user-score {
+		// 	grid-column: 1/2;
+		// 	grid-row: 1/2;
+		// }
+
+		// &-a {
+		// 	grid-row: 2/3;
+		// 	grid-column: 2/3;
+		// }
+
+		///////////////////////////
+	}
+
+	&__rating {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		width: 30%;
+		height: 50px;
+		margin: -20px auto 0;
+		background-color: $primary-color;
+		border-radius: 8px;
+		font-size: 3rem;
+		color: $color-text;
+
+		&-actions {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			width: 100%;
+		}
+
+		&-btn {
+			// text-align: center;
+			flex: 1;
+			background: none;
+			border: none;
+			cursor: pointer;
+			transition: scale 0.3s;
+		}
+
+		&-down-counter {
+			text-align: center;
+			flex: 1;
+			color: $score-one-color;
+			font-size: 2rem;
+			// color: $color-text;
+		}
+		&-up-counter {
+			text-align: center;
+			flex: 1;
+			color: $score-ten-color;
+			font-size: 2rem;
+		}
+
+		&-percent {
+			flex: 1;
+			padding: 0.1em 0.3em;
+			font-size: 2.5rem;
+			color: $bg-color;
+			border-radius: 8px;
+
+			background-color: $score-ten-color;
+		}
+	}
+
+	&__comments {
+		width: 100%;
+
+		&-item {
+			width: 100%;
+
+			margin-top: 1em;
+			padding: 0.5em 1em;
+
+			border-radius: 8px;
+
+			background-color: $primary-color;
+		}
+
+		&-details {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+		&-user {
+			color: $color-text;
+		}
+
+		&-btn {
+			border: none;
+			background: none;
+		}
+	}
+}
+
+.arrow-down-icon {
+	color: $score-one-color;
+}
+
+.arrow-up-icon {
+	color: $score-ten-color;
+}
+
+.message-icon {
+	color: $color-text;
+}

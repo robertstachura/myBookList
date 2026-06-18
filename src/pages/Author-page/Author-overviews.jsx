@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-import DistributionStatusData from "../../components/C/Data/Distribution-status-data/Distribution-status-data";
-import DistributionScoreData from "../../components/C/Data/Distribution-score-data/Distribution-score-data";
-import DataCharts from "../../components/C/Data/Data-charts/Data-charts";
+import DistributionStatusData from "../../components/Data/Distribution-status-data/Distribution-status-data";
+import DistributionScoreData from "../../components/Data/Distribution-score-data/Distribution-score-data";
+import DataCharts from "../../components/Data/Data-charts/Data-charts";
 import Book from "../../components/book/Book";
 
 import img from "../../assets/placeholder.png";

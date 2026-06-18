@@ -103,6 +103,42 @@ export function StarsFilledIcon({ className }) {
 	);
 }
 
+export function MessageIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-message ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M8 9h8" />
+			<path d="M8 13h6" />
+			<path d="M18 4a3 3 0 0 1 3 3v8a3 3 0 0 1 -3 3h-5l-5 3v-3h-2a3 3 0 0 1 -3 -3v-8a3 3 0 0 1 3 -3h12" />
+		</svg>
+	);
+}
+
+export function MessageFilledIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class={`icon icon-tabler icons-tabler-filled icon-tabler-message ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M18 3a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-4.724l-4.762 2.857a1 1 0 0 1 -1.508 -.743l-.006 -.114v-2h-1a4 4 0 0 1 -3.995 -3.8l-.005 -.2v-8a4 4 0 0 1 4 -4zm-4 9h-6a1 1 0 0 0 0 2h6a1 1 0 0 0 0 -2m2 -4h-8a1 1 0 1 0 0 2h8a1 1 0 0 0 0 -2" />
+		</svg>
+	);
+}
+
 export function Podium({ className }) {
 	return (
 		// <svg
@@ -131,6 +167,144 @@ export function Podium({ className }) {
 			<path d="M8 7 L8 21 L16 21 L16 7 Q16 5 14 5 L10 5 Q8 5 8 7 Z" />
 			<path d="M16 14 L16 21 L23 21 L23 16 Q23 14 21 14 Z" />
 			<path d="M1 19 Q1 21 3 21 L21 21 Q23 21 23 19 L23 21 L1 21 Z" />
+		</svg>
+	);
+}
+
+export function ArrowUpIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-arrow-big-up ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M9 20v-8h-3.586a1 1 0 0 1 -.707 -1.707l6.586 -6.586a1 1 0 0 1 1.414 0l6.586 6.586a1 1 0 0 1 -.707 1.707h-3.586v8a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1" />
+		</svg>
+	);
+}
+
+export function ArrowUpFilledIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class={`icon icon-tabler icons-tabler-filled icon-tabler-arrow-big-up ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M10.586 3l-6.586 6.586a2 2 0 0 0 -.434 2.18l.068 .145a2 2 0 0 0 1.78 1.089h2.586v7a2 2 0 0 0 2 2h4l.15 -.005a2 2 0 0 0 1.85 -1.995l-.001 -7h2.587a2 2 0 0 0 1.414 -3.414l-6.586 -6.586a2 2 0 0 0 -2.828 0z" />
+		</svg>
+	);
+}
+
+export function ArrowDownIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-arrow-big-down ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M15 4v8h3.586a1 1 0 0 1 .707 1.707l-6.586 6.586a1 1 0 0 1 -1.414 0l-6.586 -6.586a1 1 0 0 1 .707 -1.707h3.586v-8a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1" />
+		</svg>
+	);
+}
+
+export function ArrowDownFilledIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class={`icon icon-tabler icons-tabler-filled icon-tabler-arrow-big-down ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M10 2l-.15 .005a2 2 0 0 0 -1.85 1.995v6.999l-2.586 .001a2 2 0 0 0 -1.414 3.414l6.586 6.586a2 2 0 0 0 2.828 0l6.586 -6.586a2 2 0 0 0 .434 -2.18l-.068 -.145a2 2 0 0 0 -1.78 -1.089l-2.586 -.001v-6.999a2 2 0 0 0 -2 -2h-4z" />
+		</svg>
+	);
+}
+
+export function ThumbDownIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-thumb-down ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M7 13v-8a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v7a1 1 0 0 0 1 1h3a4 4 0 0 1 4 4v1a2 2 0 0 0 4 0v-5h3a2 2 0 0 0 2 -2l-1 -5a2 3 0 0 0 -2 -2h-7a3 3 0 0 0 -3 3" />
+		</svg>
+	);
+}
+
+export function ThumbDownFilledIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class={`icon icon-tabler icons-tabler-filled icon-tabler-thumb-down ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M13 21.008a3 3 0 0 0 2.995 -2.823l.005 -.177v-4h2a3 3 0 0 0 2.98 -2.65l.015 -.173l.005 -.177l-.02 -.196l-1.006 -5.032c-.381 -1.625 -1.502 -2.796 -2.81 -2.78l-.164 .008h-8a1 1 0 0 0 -.993 .884l-.007 .116l.001 9.536a1 1 0 0 0 .5 .866a2.998 2.998 0 0 1 1.492 2.396l.007 .202v1a3 3 0 0 0 3 3z" />
+			<path d="M5 14.008a1 1 0 0 0 .993 -.883l.007 -.117v-9a1 1 0 0 0 -.883 -.993l-.117 -.007h-1a2 2 0 0 0 -1.995 1.852l-.005 .15v7a2 2 0 0 0 1.85 1.994l.15 .005h1z" />
+		</svg>
+	);
+}
+
+export function ThumbUpIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-thumb-up ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M7 11v8a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1v-7a1 1 0 0 1 1 -1h3a4 4 0 0 0 4 -4v-1a2 2 0 0 1 4 0v5h3a2 2 0 0 1 2 2l-1 5a2 3 0 0 1 -2 2h-7a3 3 0 0 1 -3 -3" />
+		</svg>
+	);
+}
+
+export function ThumbUpFilledIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class={`icon icon-tabler icons-tabler-filled icon-tabler-thumb-up ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M13 3a3 3 0 0 1 2.995 2.824l.005 .176v4h2a3 3 0 0 1 2.98 2.65l.015 .174l.005 .176l-.02 .196l-1.006 5.032c-.381 1.626 -1.502 2.796 -2.81 2.78l-.164 -.008h-8a1 1 0 0 1 -.993 -.883l-.007 -.117l.001 -9.536a1 1 0 0 1 .5 -.865a2.998 2.998 0 0 0 1.492 -2.397l.007 -.202v-1a3 3 0 0 1 3 -3z" />
+			<path d="M5 10a1 1 0 0 1 .993 .883l.007 .117v9a1 1 0 0 1 -.883 .993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-7a2 2 0 0 1 1.85 -1.995l.15 -.005h1z" />
 		</svg>
 	);
 }

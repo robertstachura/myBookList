@@ -1,7 +1,7 @@
 import "./Book-banner.scss";
 
 import defaultImg from "../../assets/placeholder.png";
-import StatsLabel from "../Label/StatsLabel/StatsLabel";
+import StatsLabel from "../../components/StatsLabel/StatsLabel";
 
 export default function BookBanner() {
 	return (

@@ -7,7 +7,7 @@ import {
 	ArrowDownIcon,
 	ArrowDownFilledIcon,
 } from "../../../assets/Icon/Arrow-down-icon";
-import Tooltip from "../Tooltip/Tooltip";
+import Tooltip from "../../C/Tooltip/Tooltip";
 
 export default function Review({
 	id,

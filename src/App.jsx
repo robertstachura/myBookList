@@ -5,9 +5,10 @@ import {
 	Link,
 	Navigate,
 } from "react-router-dom";
-import Nav from "./components/nav/Nav";
+import Nav from "./components/Nav/Nav";
 import AuthorPage from "./pages/Author-page/Author-page";
 import BookPage from "./pages/Book-page/Book-page";
+import BookReviewPage from "./pages/Review-page/BookReviewPage";
 import {
 	BookIcon,
 	BookFilledIcon,
@@ -17,6 +18,7 @@ import {
 	MugFilledIcon,
 	CoffeeIcon,
 } from "./assets/Icon/BackgroundIcon";
+import ReviewsPage from "./pages/Reviews-page/ReviewsPage";
 // import BookBgIcon from "./assets/Icon/background/book-bg-icon.svg";
 
 export default function App() {
@@ -25,11 +27,11 @@ export default function App() {
 			<div className="App">
 				<BookIcon className="bgIcon bookIcon" />
 				<BookFilledIcon className="bgIcon bookFilledIcon" />
-				<BooksIcon className="bgIcon booksIcon"/>
+				<BooksIcon className="bgIcon booksIcon" />
 				<BookSecondIcon className="bgIcon bookSecondIcon" />
 				<MugIcon className="bgIcon mugIcon" />
 				<MugFilledIcon className="bgIcon mugFilledIcon" />
-				<CoffeeIcon className="bgIcon coffeeIcon"/>
+				<CoffeeIcon className="bgIcon coffeeIcon" />
 
 				<Nav />
 
@@ -38,6 +40,8 @@ export default function App() {
 					{/* <Route path="/" element={<HomePage/>} /> */}
 					<Route path="/author/:id" element={<AuthorPage />} />
 					<Route path="/book/:id" element={<BookPage />} />
+					<Route path="/review/:id" element={<BookReviewPage />} />
+					<Route path="/reviews" element={<ReviewsPage />} />
 
 					{/* Trasa z parametrem */}
 					{/* <Route path="/products/:id" element={<ProductDetail />} /> */}
