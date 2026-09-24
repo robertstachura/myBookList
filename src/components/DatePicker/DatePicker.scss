@@ -1,0 +1,101 @@
+@use "../../colors" as *;
+
+.date-picker {
+	position: absolute;
+	top: 50px;
+	height: 302px;
+	width: 304px;
+	padding: 0.5em;
+	background-color: $primary-color;
+	color: #ffffffde;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px #000;
+	// opacity: 0;
+	transition: opacity .3s;
+	// overflow: hidden;
+
+	&--right {
+		right: 0;
+	}
+
+	&--active {
+		opacity: 1;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 2rem;
+
+		&-date {
+			font-size: 1.7rem;
+		}
+
+		&-btn {
+			border: none;
+			line-height: 0;
+			background: none;
+			color: $accent-blue;
+			cursor: pointer;
+		}
+	}
+
+	&__day-of-week {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px 0.5em 10px 0.5em;
+		border-bottom: 1px solid $accent-blue;
+
+		&-item {
+			width: 25px;
+			font-size: 1.3rem;
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+		gap: 10px;
+		place-items: center;
+		padding: 0.5em;
+		margin-top: 10px;
+
+		&-day {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 25px;
+			width: 25px;
+			background: none;
+			border: none;
+			color: $color-text;
+			border-radius: 50%;
+			font: inherit;
+			font-size: 1.4rem;
+			transition:
+				background-color 0.2s,
+				color 0.2s;
+			cursor: pointer;
+
+			&:hover {
+				color: $accent-blue;
+			}
+
+			&--focus {
+				background-color: $accent-blue;
+				color: #ffffffde;
+
+				&:hover {
+					color: #ffffffde;
+				}
+			}
+
+			&--current-month {
+				color: #ffffffde;
+			}
+		}
+	}
+}

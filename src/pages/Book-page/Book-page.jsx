@@ -1,13 +1,15 @@
 import BookHeader from "./DescriptionBox";
 import "./Book-page.scss";
-import { useState, useEffect, Suspense, lazy } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useParams } from "react-router-dom";
-import BookBanner from "./Book-banner";
+import BookBanner from "../../components/Trash/Book-banner";
 import DescriptionBox from "./DescriptionBox";
 import DistributionScoreData from "../../components/Data/Distribution-score-data/Distribution-score-data";
 import DistributionStatusData from "../../components/Data/Distribution-status-data/Distribution-status-data";
 import DataCharts from "../../components/Data/Data-charts/Data-charts";
 import MediaBox from "../../components/MediaBox/MediaBox";
+import defaultImg from "../../assets/placeholder.png";
+import StatsLabel from "../../components/StatsLabel/StatsLabel";
 
 import {
 	StarFilledIcon,
@@ -20,23 +22,18 @@ import {
 	ArrowUpFilledIcon,
 	ArrowUpIcon,
 } from "../../assets/Icon/UiIcon";
+import ReviewCard from "../../components/Review/ReviewCard";
+import RankingLabel from "../../components/RankingLabel/RankingLabel";
+import LibraryModal from "./Library-modal";
+import BannerBox from "./Banner-box";
 
 export default function BookPage() {
 	const { id } = useParams();
-	// const BooksContainer = lazy(() => import("./Books-container"));
-	// const ReviewContainer = lazy(() => import("./Review-container"));
-
-	// const [currentContent, setCurrentContent] = useState(0);
-
-	// const contentComponents = {
-	// 	// 0: <BookOverviews />,
-	// 	// 1: <BooksContainer />,
-	// 	// 2: <ReviewContainer />
-	// };
 
 	const [rating, setRating] = useState(null);
 	const [stats, setStats] = useState(null);
 	const [ratingChart, setRatingChart] = useState(null);
+	// const [isOpenModal, setIsOpenModal] = useState(false);
 
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
@@ -65,13 +62,15 @@ export default function BookPage() {
 		fetchAuthor();
 	}, [id]);
 
+	console.log(ratingChart);
+
 	if (loading) return <div>Ładowanie...</div>;
 	if (error) return <div>Błąd: {error}</div>;
 
 	return (
 		<div className="book-page">
 			<header className="book-page__banner">
-				<BookBanner />
+				<BannerBox />
 			</header>
 
 			<section className="book-page__description">
@@ -80,44 +79,28 @@ export default function BookPage() {
 
 			<section className="book-page__sidebar">
 				<div className="book-page__highlighted margin-bottom">
-					<a className="book-page__highlighted-item ">
-						<StarsFilledIcon className="book-page__highlighted-icon star-icon" />
-						{/* <StarFilledIcon className="book-page__highlighted-icon"/> */}
-						<p className="book-page__highlighted-content">
-							#3 Najwyżej oceniane
-						</p>
-					</a>
-					<a className="book-page__highlighted-item heart-icon">
-						<HeartFilledIcon className="book-page__highlighted-icon" />
-						<p className="book-page__highlighted-content">
-							#3 Ranking polubień
-						</p>
-					</a>
-					<a className="book-page__highlighted-item ">
-						<StarFilledIcon className="book-page__highlighted-icon star-icon" />
-						{/* <StarFilledIcon className="book-page__highlighted-icon"/> */}
-						<p className="book-page__highlighted-content">
-							#3 Najwyżej oceniane w roku 2025
-						</p>
-					</a>
-					<a className="book-page__highlighted-item heart-icon">
-						<HeartFilledIcon className="book-page__highlighted-icon" />
-						<p className="book-page__highlighted-content">
-							#3 Ranking polubień w roku 2025
-						</p>
-					</a>
-					<a className="book-page__highlighted-item heart-icon">
-						<HeartFilledIcon className="book-page__highlighted-icon" />
-						<p className="book-page__highlighted-content">
-							#3 Najwyżej oceniane w fantasy
-						</p>
-					</a>
-					<a className="book-page__highlighted-item heart-icon">
-						<HeartFilledIcon className="book-page__highlighted-icon" />
-						<p className="book-page__highlighted-content">
-							#3 Ranking polubień w fantasy
-						</p>
-					</a>
+					<RankingLabel icon="star" text="#3 Najwyżej oceniane" link="" />
+					<RankingLabel icon="heart" text="#3 Ranking polubień" link="" />
+					<RankingLabel
+						icon="star"
+						text="#3 Najwyżej oceniane w roku 2025"
+						link=""
+					/>
+					<RankingLabel
+						icon="heart"
+						text="#3 Ranking polubień w roku 2025"
+						link=""
+					/>
+					<RankingLabel
+						icon="star"
+						text="#3 Najwyżej oceniane w fantasy"
+						link=""
+					/>
+					<RankingLabel
+						icon="heart"
+						text="#3 Ranking polubień w fantasy"
+						link=""
+					/>
 				</div>
 
 				<div className="book-page__tags margin-bottom">
@@ -138,101 +121,12 @@ export default function BookPage() {
 						Nagroda nike
 					</a>
 				</div>
-				<MediaBox />
+
+
+				<ReviewCard />
 			</section>
 
 			<section className="book-page__overview">
-				<div className="book-page__reviews margin-bottom">
-					<a className="book-page__reviews-item">
-						<div className="book-page__reviews-header">
-							<p>
-								<ArrowUpIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<ArrowDownIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<MessageIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>20-11-2024</p>
-						</div>
-						<p className="book-page__reviews-content">
-							woiafn awoi awioao jniewfq liowa oawon poawj
-						</p>
-					</a>
-					<a className="book-page__reviews-item">
-						<div className="book-page__reviews-header">
-							<p>
-								<ArrowUpIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<ArrowDownIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<MessageIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>20-11-2024</p>
-						</div>
-						<p className="book-page__reviews-content">
-							woiafn awoi awioao jniewfq liowa oawon poawj
-						</p>
-					</a>
-					<a className="book-page__reviews-item">
-						<div className="book-page__reviews-header">
-							<p>
-								<ArrowUpIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<ArrowDownIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<MessageIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>20-11-2024</p>
-						</div>
-						<p className="book-page__reviews-content">
-							woiafn awoi awioao jniewfq liowa oawon poawj
-						</p>
-					</a>
-					<a className="book-page__reviews-item">
-						<div className="book-page__reviews-header">
-							<p>
-								<ArrowUpIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<ArrowDownIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<MessageIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>20-11-2024</p>
-						</div>
-						<p className="book-page__reviews-content">
-							woiafn awoi awioao jniewfq liowa oawon poawj
-						</p>
-					</a>
-					<a className="book-page__reviews-item">
-						<div className="book-page__reviews-header">
-							<p>
-								<ArrowUpIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<ArrowDownIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>
-								<MessageIcon className={"book-page__reviews-icon"} /> 13
-							</p>
-							<p>20-11-2024</p>
-						</div>
-						<p className="book-page__reviews-content">
-							woiafn awoi awioao jniewfq liowa oawon poawj
-						</p>
-					</a>
-					<a className="book-page__reviews-item book-page__reviews-all">
-						Wyszstkie recenzje
-					</a>
-				</div>
-
 				<div className="book-page__status-distribution margin-bottom">
 					<DistributionStatusData stats={stats} />
 				</div>
@@ -249,8 +143,17 @@ export default function BookPage() {
 					<DataCharts chart={ratingChart} header={"Readers Over Time"} />
 				</div>
 
+				<div className="book-page__reviews margin-bottom">
+					<ReviewCard />
+					<ReviewCard />
+					<ReviewCard />
+					<a className="book-page__reviews-all">Wyszstkie recenzje</a>
+				</div>
+
 				<div className="book-page__recomendation"></div>
 			</section>
+
+			{/* <LibraryModal isActive={isOpenModal} /> */}
 		</div>
 	);
 }

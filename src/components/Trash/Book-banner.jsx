@@ -1,14 +1,16 @@
 import "./Book-banner.scss";
 
 import defaultImg from "../../assets/placeholder.png";
-import StatsLabel from "../../components/StatsLabel/StatsLabel";
+import StatsLabel from "../StatsLabel/StatsLabel";
 
 export default function BookBanner() {
 	return (
 		<div className="book-banner">
 			<div className="book-banner__div">
 				<img src={defaultImg} alt="" className="book-banner__div-img" />
-				<button className="book-banner__div-add-btn">Dodaj do listy</button>
+				<button className="book-banner__div-add-btn">
+					Dodaj do biblioteki
+				</button>
 			</div>
 
 			{/* <button className="book-banner__actions-favorite-btn">

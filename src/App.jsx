@@ -19,6 +19,7 @@ import {
 	CoffeeIcon,
 } from "./assets/Icon/BackgroundIcon";
 import ReviewsPage from "./pages/Reviews-page/ReviewsPage";
+import LibraryModal from "./pages/Book-page/Library-modal";
 // import BookBgIcon from "./assets/Icon/background/book-bg-icon.svg";
 
 export default function App() {

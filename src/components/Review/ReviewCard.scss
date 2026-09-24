@@ -1,0 +1,43 @@
+@use "../../colors" as *;
+
+.review-card {
+	height: 130px;
+	// width: 100%;
+	font-size: 1.3rem;
+	color: $color-text;
+	background-color: $primary-color;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $secondary-color;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+
+		height: 40px;
+		// width: 100%;
+
+		padding: 0.5em;
+
+		// font-size: 1.8rem;
+
+		background-color: $secondary-color;
+		border-radius: 8px;
+	}
+
+	&__icon {
+		// vertical-align: middle;
+	}
+
+	&__content {
+		height: 90px;
+		padding: 0.5em;
+		text-align: center;
+		overflow: hidden;
+	}
+}

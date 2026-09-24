@@ -1,0 +1,43 @@
+@use "../../colors" as *;
+
+.ranking-label {
+	&__item {
+		display: flex;
+		align-items: center;
+
+		padding: 8px 12px;
+		margin-bottom: 1em;
+
+		border-radius: 8px;
+		background-color: $primary-color;
+		text-decoration: none;
+
+		transition: color 0.3s;
+
+		cursor: pointer;
+
+		&:hover {
+			.ranking-label__content {
+				color: $color-text;
+			}
+		}
+	}
+
+	&__content {
+		width: 85%;
+		font-size: 1.4rem;
+		text-align: center;
+		color: $color-text-light;
+	}
+
+	&__icon {
+	}
+}
+
+.star-icon {
+	color: $gold;
+}
+
+.heart-icon {
+	color: $heart-color;
+}

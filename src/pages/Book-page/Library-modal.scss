@@ -1,0 +1,356 @@
+@use "../../colors" as *;
+
+.library-modal {
+	position: fixed;
+	inset: 0;
+	display: none;
+	z-index: 100;
+
+	&--active {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__body {
+		position: relative;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr 2fr;
+		gap: 1em;
+		width: 600px;
+		height: 500px;
+		padding: 2em;
+		background-color: $primary-color;
+		border-radius: 8px;
+		z-index: 10;
+
+		&-header {
+			color: $color-text;
+			margin-left: 5px;
+			margin-bottom: 5px;
+			font-size: 1.3rem;
+		}
+
+		&-status {
+			grid-row: 1/2;
+			grid-column: 1/2;
+		}
+
+		&-score {
+			grid-row: 2/3;
+			grid-column: 1/2;
+		}
+
+		&-page-counter {
+			grid-row: 2/3;
+			grid-column: 2/3;
+		}
+
+		&-reading-counter {
+			grid-row: 2/3;
+			grid-column: 3/4;
+		}
+
+		&-start-date-picker {
+			grid-row: 1/2;
+			grid-column: 2/3;
+		}
+
+		&-end-date-picker {
+			grid-row: 1/2;
+			grid-column: 3/4;
+		}
+
+		&-list {
+			grid-column: 3/4;
+			grid-row: 3/4;
+		}
+
+		&-note {
+			grid-column: 1/3;
+			grid-row: 3/4;
+		}
+
+		&-save-btn {
+			position: absolute;
+			bottom: 10px;
+			right: 20px;
+			padding: 0.4em 0.8em;
+			font-size: 1.5rem;
+			background-color: $accent-blue;
+			border: none;
+			border-radius: 8px;
+			transition: color 0.3s;
+			cursor: pointer;
+
+			&:hover {
+				color: $color-text-white;
+			}
+		}
+	}
+
+	&__bg {
+		position: fixed;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+}
+
+.input-item {
+	height: 40px;
+	width: 100%;
+	border: none;
+	border-radius: 8px;
+	appearance: none;
+	text-align: center;
+	color: $color-text-lighter;
+	background-color: $bg-color;
+	font-size: 1.6rem;
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	// Firefox
+	-moz-appearance: textfield;
+
+	&:focus {
+		outline: none;
+	}
+
+	&--counter {
+		padding-right: 40px;
+	}
+}
+
+.status-input {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 0.5em;
+	cursor: pointer;
+	z-index: 10;
+
+	&__options {
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		width: 100%;
+		height: 0px;
+		background-color: $bg-color;
+		border-radius: 8px;
+		transform: translate(-50%, 42px);
+		overflow: hidden;
+		transition:
+			height 0.1s,
+			padding 0.1s;
+
+		&--open {
+			height: 143px;
+			padding: 0.5em;
+		}
+
+		&-item {
+			padding: 0.2em;
+
+			&:hover {
+				color: $accent-blue;
+				background-color: $primary-color;
+				border-radius: 8px;
+			}
+		}
+	}
+
+	&__chevron-down-icon {
+		color: $accent-blue;
+		transition: rotate 0.3s;
+
+		&--rotate {
+			rotate: 180deg;
+		}
+	}
+}
+
+.score-input {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 5px;
+}
+
+.page-counter-input {
+	position: relative;
+	padding-right: 15px;
+}
+
+.date-picker-input {
+	position: relative;
+	z-index: 10;
+
+	&__text {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		width: 100%;
+		height: 100%;
+
+		font-size: 1.5rem;
+
+		cursor: pointer;
+	}
+
+	&__calendary-icon {
+		color: $accent-blue;
+	}
+}
+
+.input-btn {
+	line-height: 0;
+	border: none;
+	border-radius: 8px;
+	background-color: $accent-blue;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	&__max {
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		height: 30px;
+		width: 30px;
+		transform: translateY(-50%);
+		border-radius: 8px;
+		transition: color 0.3s;
+	}
+
+	&:hover {
+		color: $color-text-white;
+	}
+}
+
+.user-lists {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 10px;
+	// padding: 0 0.5em;
+	color: $color-text;
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+		&:hover {
+			color: $color-text-white;
+		}
+
+		&-input {
+			position: absolute;
+			opacity: 0;
+			width: 0;
+			height: 0;
+
+			&:checked + .user-lists__item-custom-checkbox {
+				&::after {
+					content: "";
+					width: 5px;
+					height: 9px;
+					border: solid $accent-blue;
+					border-width: 0 2px 2px 0;
+					transform: rotate(45deg);
+					margin-bottom: 2px;
+				}
+			}
+
+			&:focus-visible + .user-lists__item-custom-checkbox {
+				outline: 2px solid $accent-blue;
+				outline-offset: 2px;
+			}
+		}
+
+		&-custom-checkbox {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 18px;
+			height: 18px;
+			background-color: $bg-color;
+			border-radius: 4px;
+			transition: background-color 0.2s;
+		}
+
+		&-name {
+			margin-left: 10px;
+			font-size: 1.4rem;
+			transition: color 0.3s;
+		}
+
+		&-icon {
+			width: 22px;
+			height: 18px;
+			font-size: 1.4rem;
+			color: $accent-blue;
+		}
+
+		&-new-list-input {
+			width: 100%;
+			margin-left: 10px;
+			font-size: 1.4rem;
+			color: $color-text;
+			background: none;
+			border: none;
+			outline: none;
+
+			&:focus {
+				border-bottom: 1px solid $accent-blue;
+			}
+		}
+	}
+}
+
+.note-input {
+	width: 100%;
+	height: 100%;
+	padding: 1em;
+	border-radius: 8px;
+	border: none;
+	background-color: $bg-color;
+	color: $color-text;
+	// overflow-x: auto;
+	resize: none;
+	&:focus {
+		outline: none;
+	}
+
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: rgba(0, 0, 0, 0.1);
+		border-radius: 2px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: rgba(0, 0, 0, 0.3);
+		border-radius: 2px;
+
+		&:hover {
+			background: rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	scrollbar-width: thin;
+	scrollbar-color: $primary-color rgba(0, 0, 0, 0.1);
+}

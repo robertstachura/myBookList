@@ -1,3 +1,7 @@
+
+
+
+
 export function HeartIcon({ className }) {
 	return (
 		<svg
@@ -141,20 +145,6 @@ export function MessageFilledIcon({ className }) {
 
 export function Podium({ className }) {
 	return (
-		// <svg
-		// 	xmlns="http://www.w3.org/2000/svg"
-		// 	width="24"
-		// 	height="24"
-		// 	viewBox="0 0 24 24"
-		// 	fill="currentColor"
-		// 	class={className}>
-		// 	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
-		// 	<rect x="3" y="13" width="5" height="7" rx="0.3" />
-		// 	<rect x="9.5" y="9" width="5" height="11" rx="0.3" />
-		// 	<rect x="16" y="16" width="5" height="4" rx="0.3" />
-		// 	<rect x="3" y="19.5" width="18" height="1" rx="0.3" />
-		// </svg>
-
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			width="22"
@@ -305,6 +295,182 @@ export function ThumbUpFilledIcon({ className }) {
 			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 			<path d="M13 3a3 3 0 0 1 2.995 2.824l.005 .176v4h2a3 3 0 0 1 2.98 2.65l.015 .174l.005 .176l-.02 .196l-1.006 5.032c-.381 1.626 -1.502 2.796 -2.81 2.78l-.164 -.008h-8a1 1 0 0 1 -.993 -.883l-.007 -.117l.001 -9.536a1 1 0 0 1 .5 -.865a2.998 2.998 0 0 0 1.492 -2.397l.007 -.202v-1a3 3 0 0 1 3 -3z" />
 			<path d="M5 10a1 1 0 0 1 .993 .883l.007 .117v9a1 1 0 0 1 -.883 .993l-.117 .007h-1a2 2 0 0 1 -1.995 -1.85l-.005 -.15v-7a2 2 0 0 1 1.85 -1.995l.15 -.005h1z" />
+		</svg>
+	);
+}
+
+export function PlusIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-plus ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M12 5l0 14" />
+			<path d="M5 12l14 0" />
+		</svg>
+	);
+}
+
+export function MinusIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-minus ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M5 12l14 0" />
+		</svg>
+	);
+}
+
+export function ChevronDownIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class={`icon icon-tabler icons-tabler-filled icon-tabler-chevron-down ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M18.707 8.293a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1 -1.414 0l-6 -6a1 1 0 0 1 1.414 -1.414l5.293 5.293l5.293 -5.293a1 1 0 0 1 1.414 0" />
+		</svg>
+	);
+}
+
+export function ChevronRightIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-chevron-right ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M9 6l6 6l-6 6" />
+		</svg>
+	);
+}
+
+export function ChevronLeftIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-chevron-left ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M15 6l-6 6l6 6" />
+		</svg>
+	);
+}
+
+export function ChevronsLeftIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-chevrons-left ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M11 7l-5 5l5 5" />
+			<path d="M17 7l-5 5l5 5" />
+		</svg>
+	);
+}
+
+export function ChevronsRightIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-chevrons-right ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M7 7l5 5l-5 5" />
+			<path d="M13 7l5 5l-5 5" />
+		</svg>
+	);
+}
+
+export function CalendaryIcon({ className }) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class={`icon icon-tabler icons-tabler-outline icon-tabler-calendar-week ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12" />
+			<path d="M16 3v4" />
+			<path d="M8 3v4" />
+			<path d="M4 11h16" />
+			<path d="M7 14h.013" />
+			<path d="M10.01 14h.005" />
+			<path d="M13.01 14h.005" />
+			<path d="M16.015 14h.005" />
+			<path d="M13.015 17h.005" />
+			<path d="M7.01 17h.005" />
+			<path d="M10.01 17h.005" />
+		</svg>
+	);
+}
+
+export function BookFilledIcon(className) {
+	return (
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			class={`icon icon-tabler icons-tabler-filled icon-tabler-book ${className}`}>
+			<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+			<path d="M21.5 5.134a1 1 0 0 1 .493 .748l.007 .118v13a1 1 0 0 1 -1.5 .866a8 8 0 0 0 -7.5 -.266v-15.174a10 10 0 0 1 8.5 .708m-10.5 -.707l.001 15.174a8 8 0 0 0 -7.234 .117l-.327 .18l-.103 .044l-.049 .016l-.11 .026l-.061 .01l-.117 .006h-.042l-.11 -.012l-.077 -.014l-.108 -.032l-.126 -.056l-.095 -.056l-.089 -.067l-.06 -.056l-.073 -.082l-.064 -.089l-.022 -.036l-.032 -.06l-.044 -.103l-.016 -.049l-.026 -.11l-.01 -.061l-.004 -.049l-.002 -13.068a1 1 0 0 1 .5 -.866a10 10 0 0 1 8.5 -.707" />
 		</svg>
 	);
 }

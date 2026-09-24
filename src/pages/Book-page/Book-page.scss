@@ -1,6 +1,7 @@
 @use "../../colors" as *;
 
 .book-page {
+	// position: relative;
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	grid-template-rows: repeat(10, auto);
@@ -30,38 +31,38 @@
 		grid-row: 2/3;
 	}
 
-	&__highlighted {
-		&-item {
-			display: flex;
-			align-items: center;
+	// &__highlighted {
+	// 	&-item {
+	// 		display: flex;
+	// 		align-items: center;
 
-			padding: 8px 12px;
-			margin-bottom: 1em;
+	// 		padding: 8px 12px;
+	// 		margin-bottom: 1em;
 
-			border-radius: 8px;
-			background-color: $primary-color;
+	// 		border-radius: 8px;
+	// 		background-color: $primary-color;
 
-			transition: color 0.3s;
+	// 		transition: color 0.3s;
 
-			cursor: pointer;
+	// 		cursor: pointer;
 
-			&:hover {
-				.book-page__highlighted-content {
-					color: $color-text;
-				}
-			}
-		}
+	// 		&:hover {
+	// 			.book-page__highlighted-content {
+	// 				color: $color-text;
+	// 			}
+	// 		}
+	// 	}
 
-		&-content {
-			width: 85%;
-			font-size: 1.4rem;
-			text-align: center;
-			color: $color-text-light;
-		}
+	// 	&-content {
+	// 		width: 85%;
+	// 		font-size: 1.4rem;
+	// 		text-align: center;
+	// 		color: $color-text-light;
+	// 	}
 
-		&-icon {
-		}
-	}
+	// 	&-icon {
+	// 	}
+	// }
 
 	&__tags {
 		padding: 0.5em;
@@ -112,11 +113,15 @@
 	&__reviews {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
 		gap: 1em;
 
-		&-item {
-			font-size: 1.3rem;
+		&-all {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.8rem;
+
 			color: $color-text;
 			background-color: $primary-color;
 			border-radius: 8px;
@@ -126,40 +131,6 @@
 			&:hover {
 				background-color: $secondary-color;
 			}
-		}
-
-		&-header {
-			display: flex;
-			align-items: center;
-			justify-content: space-evenly;
-
-			height: 40px;
-			width: 100%;
-
-			padding: 0.5em;
-
-			// font-size: 1.8rem;
-
-			background-color: $secondary-color;
-			border-radius: 8px;
-		}
-
-		&-icon {
-			// height: 1.8rem;
-			vertical-align: middle;
-		}
-
-		&-content {
-			height: 70px;
-			padding: 0.5em;
-			text-align: center;
-		}
-
-		&-all {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 1.8rem;
 		}
 	}
 
@@ -187,3 +158,45 @@
 .heart-icon {
 	color: $heart-color;
 }
+
+// .book-banner {
+// 	display: flex;
+// 	// justify-content: space-between;
+// 	background-color: $primary-color;
+// 	border-radius: 8px;
+// 	padding: 1em;
+
+// 	&__div {
+// 		display: flex;
+// 		flex-direction: column;
+
+// 		&-img {
+// 			height: 265px;
+// 			width: 185px;
+// 			border-radius: 8px;
+// 		}
+
+// 		&-add-btn {
+// 			width: 185px;
+// 			height: 35px;
+// 			margin-top: 1em;
+// 			color: $color-text-white;
+// 			background-color: $accent-primary;
+// 			border: none;
+// 			border-radius: 8px;
+// 			cursor: pointer;
+// 		}
+// 	}
+
+// 	&__info {
+// 		display: grid;
+// 		grid-template-columns: 1fr 1fr;
+// 		grid-template-rows: repeat(6, 1fr);
+// 		gap: 1em;
+// 		width: 100%;
+// 		// height: 100%;
+// 		padding-left: 1em;
+// 		padding-top: 0.3em;
+// 		// overflow-y:scroll;
+// 	}
+// }
